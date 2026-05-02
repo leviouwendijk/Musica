@@ -1,0 +1,55 @@
+{
+  "failed" : 0,
+  "failed_names" : [
+
+  ],
+  "generated_at" : "2026-05-02T15:53:38Z",
+  "passed" : 4,
+  "results" : [
+    {
+      "display_name" : "pitch",
+      "duration_seconds" : 0.0014690160751342773,
+      "name" : "pitch",
+      "status" : "passed",
+      "tags" : [
+        "math",
+        "pitch",
+        "tuning"
+      ]
+    },
+    {
+      "display_name" : "yin-pitch-detector",
+      "duration_seconds" : 0.23539304733276367,
+      "name" : "yin-pitch-detector",
+      "status" : "passed",
+      "tags" : [
+        "detection",
+        "pitch",
+        "yin"
+      ]
+    },
+    {
+      "display_name" : "sample-ring-buffer",
+      "duration_seconds" : 0.00038492679595947266,
+      "name" : "sample-ring-buffer",
+      "status" : "passed",
+      "tags" : [
+        "buffer",
+        "detection"
+      ]
+    },
+    {
+      "display_name" : "pitch-stability",
+      "duration_seconds" : 0.00020301342010498047,
+      "name" : "pitch-stability",
+      "status" : "passed",
+      "tags" : [
+        "stability",
+        "tuning"
+      ]
+    }
+  ],
+  "skipped" : 0,
+  "title" : "Musica flow tests",
+  "total" : 4
+}
