@@ -1,0 +1,19 @@
+uuid = "9CD14BA5-6D41-4C96-87D3-390794960B1B"
+name = "Musica"
+types {
+    "binary"
+}
+versions {
+    release {
+        major = 0
+        minor = 1
+        patch = 0
+    }
+}
+compile {
+    use = true
+    arguments { "--targets" "tuner" }
+}
+details = ""
+author = "leviouwendijk"
+update = "https://raw.githubusercontent.com/leviouwendijk/Musica/master/build-object.pkl"
