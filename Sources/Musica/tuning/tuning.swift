@@ -78,3 +78,30 @@ public enum GuitarTuning {
         )
     }
 }
+
+public enum BassTuning {
+    public static func standard(
+        pitch: PitchStandard = .standard
+    ) -> Tuning {
+        let notes: [MidiNote] = [
+            .bassE1,
+            .bassA1,
+            .bassD2,
+            .bassG2,
+        ]
+
+        return Tuning(
+            name: "bass-standard",
+            targets: notes.map { note in
+                TuningTarget(
+                    name: note.name,
+                    note: note,
+                    frequency: PitchMath.frequency(
+                        for: note,
+                        standard: pitch
+                    )
+                )
+            }
+        )
+    }
+}

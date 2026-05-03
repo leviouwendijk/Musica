@@ -90,6 +90,21 @@ extension MusicaFlowSuite {
                     "guitar.standard.target-names"
                 )
             }
+
+            Step("standard bass tuning has expected targets") {
+                let tuning = BassTuning.standard()
+
+                try Expect.equal(
+                    tuning.targets.map(\.name),
+                    [
+                        "E1",
+                        "A1",
+                        "D2",
+                        "G2",
+                    ],
+                    "bass.standard.target-names"
+                )
+            }
         }
     }
 }

@@ -34,6 +34,11 @@ public struct MidiNote: Sendable, Codable, Hashable, Comparable {
 public extension MidiNote {
     static let a4 = MidiNote(69)
 
+    static let bassE1 = MidiNote(28)
+    static let bassA1 = MidiNote(33)
+    static let bassD2 = MidiNote(38)
+    static let bassG2 = MidiNote(43)
+
     static let guitarE2 = MidiNote(40)
     static let guitarA2 = MidiNote(45)
     static let guitarD3 = MidiNote(50)

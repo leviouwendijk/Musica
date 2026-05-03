@@ -29,7 +29,9 @@ struct TunerRunner: Sendable {
 
         let session = CaptureAudioInputSession(
             audio: audio,
-            chain: Self.chain
+            chain: Self.chain(
+                for: options.mode
+            )
         ) { buffer in
             ring.appendSamples { append in
                 buffer.forEachMonoFloatSample { sample in
@@ -154,6 +156,16 @@ private extension TunerRunner {
                 minFrequency: 70,
                 maxFrequency: 400
             )
+
+        case .bass:
+            return try PitchDetectionOptions(
+                sampleRate: options.sampleRate,
+                window: options.window,
+                minFrequency: 35,
+                maxFrequency: 300,
+                threshold: 0.15,
+                rmsGate: 0.004
+            )
         }
     }
 
@@ -172,6 +184,13 @@ private extension TunerRunner {
 
         case .guitar:
             target = GuitarTuning.standard(
+                pitch: pitch
+            ).nearest(
+                to: result.frequency
+            )
+
+        case .bass:
+            target = BassTuning.standard(
                 pitch: pitch
             ).nearest(
                 to: result.frequency

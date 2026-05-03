@@ -10,6 +10,7 @@ enum TunerCommand: ArgumentCommand {
         HelpCommand.self,
         ListenCommand.self,
         GuitarCommand.self,
+        BassCommand.self,
     ]
 
     static func main() async {
