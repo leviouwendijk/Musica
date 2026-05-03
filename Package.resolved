@@ -1,5 +1,5 @@
 {
-  "originHash" : "b5da7c11f94549cb6a48fdd30ebc1d6203e1e153993a3d937e9b535c3f4559c9",
+  "originHash" : "d983de61481a3d351b11aaea1ce5ad9eea3b4ac13d3a66223d02614e029128ee",
   "pins" : [
     {
       "identity" : "ansi",
@@ -25,7 +25,7 @@
       "location" : "https://github.com/leviouwendijk/Capture.git",
       "state" : {
         "branch" : "master",
-        "revision" : "b90e45486015948badf2e12711a85bd3a537da11"
+        "revision" : "b99140ffde32c7e70f601ec9ae9a7544b08da8e3"
       }
     },
     {

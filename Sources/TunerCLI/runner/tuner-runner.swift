@@ -18,14 +18,18 @@ struct TunerRunner: Sendable {
             capacity: detection.sampleRate * 2
         )
         let stop = TunerStopState()
+
         let audio = try CaptureAudioOptions(
             device: audioDevice(),
             sampleRate: options.sampleRate,
             channel: options.channel,
-            codec: .pcm
+            codec: .pcm,
+            sample: .float32
         )
+
         let session = CaptureAudioInputSession(
-            audio: audio
+            audio: audio,
+            chain: Self.chain
         ) { buffer in
             ring.appendSamples { append in
                 buffer.forEachMonoFloatSample { sample in
@@ -35,6 +39,7 @@ struct TunerRunner: Sendable {
                 }
             }
         }
+
         let signalHandler = TunerSignalHandler {
             stop.stop()
             session.cancel()
