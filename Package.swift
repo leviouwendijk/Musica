@@ -17,17 +17,11 @@ let package = Package(
             name: "tuner",
             targets: ["tuner"]
         ),
-        .executable(
-            name: "mtest",
-            targets: ["MusicaTestFlows"]
-        ),
     ],
     dependencies: [
         .package(url: "https://github.com/leviouwendijk/Capture.git", branch: "master"),
         .package(url: "https://github.com/leviouwendijk/Terminal.git", branch: "master"),
         .package(url: "https://github.com/leviouwendijk/Arguments.git", branch: "master"),
-        // .package(url: "https://github.com/leviouwendijk/Methods.git", branch: "master"),
-        .package(url: "https://github.com/leviouwendijk/TestFlows.git", branch: "master"),
     ],
     targets: [
         .target(
@@ -43,14 +37,6 @@ let package = Package(
                 // .product(name: "Methods", package: "Methods"),
             ],
             path: "Sources/TunerCLI",
-        ),
-        .executableTarget(
-            name: "MusicaTestFlows",
-            dependencies: [
-                "Musica",
-                // "Capture",
-                .product(name: "TestFlows", package: "TestFlows"),
-            ]
         ),
     ]
 )
