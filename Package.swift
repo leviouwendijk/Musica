@@ -19,9 +19,9 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/leviouwendijk/Capture.git", branch: "master"),
-        .package(url: "https://github.com/leviouwendijk/Terminal.git", branch: "master"),
-        .package(url: "https://github.com/leviouwendijk/Arguments.git", branch: "master"),
+        .package(url: "https://github.com/swift-lco/Capture.git", branch: "master"),
+        .package(url: "https://github.com/swift-lco/Terminal.git", branch: "master"),
+        .package(url: "https://github.com/swift-lco/Arguments.git", branch: "master"),
     ],
     targets: [
         .target(
