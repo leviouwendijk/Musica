@@ -76,7 +76,7 @@
     {
       "identity" : "testflows",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/leviouwendijk/TestFlows.git",
+      "location" : "https://github.com/swift-tooling/TestFlows.git",
       "state" : {
         "branch" : "master",
         "revision" : "cc6f6216e9c77cf2862c047a4666336cc47d25e8"
